@@ -129,9 +129,20 @@ footer .legal p{margin-bottom:6px}
 footer .legal a{display:inline;color:var(--gold);text-decoration:underline}
 article h2 a{color:inherit;text-decoration:none}
 article h2 a:hover{color:var(--gold)}
+/* biz 專屬：sidebar 在左邊 */
+.lede-reverse{grid-template-columns:minmax(0,1fr) minmax(0,2.2fr)}
+.lede-reverse .lede-side{padding-left:0;padding-right:28px;border-left:none;border-right:3px solid var(--gold);order:-1}
+/* biz 專屬：h2 金底深色文字 accent bar */
+h2 .section-kicker{background:var(--gold);color:#0a1a30;padding:2px 10px;border-radius:2px;margin-right:10px;letter-spacing:0.1em}
+/* biz 專屬：odds ticker bar */
+.odds-ticker{display:flex;gap:0;overflow:hidden;background:#0a1a30;border:1px solid var(--gold);margin:16px 0;border-radius:4px}
+.odds-ticker span{flex:1;text-align:center;padding:10px 8px;font-family:var(--serif);font-size:0.88rem;border-right:1px solid var(--line);color:var(--ink)}
+.odds-ticker span:last-child{border-right:none}
+.odds-ticker b{display:block;color:var(--gold2);font-size:1.15rem;font-family:var(--serif)}
 @media(max-width:960px){
  .lede{grid-template-columns:1fr;gap:24px}
  .lede-side{padding-left:0;border-left:none;border-top:2px solid var(--gold);padding-top:20px}
+ .lede-reverse .lede-side{padding-right:0;border-right:none;border-top:2px solid var(--gold);order:0}
  .lede-main h1{font-size:2.2rem}
  .grid-3 a:nth-child(3n){border-right:1px solid var(--line)}
  .grid-3 a:nth-child(2n){border-right:none}
